@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="{% static 'img/core-img/hamburger.png' %}" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <!-- Close Btn -->
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="O que está procurando...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'partials/menu.html' %}
+
+        <!-- Receipe Slider -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="receipe-slider owl-carousel">
+                        <img src="{% static 'img/bg-img/tomate_banner.jpg' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Receipe Content Area -->
+        <div class="receipe-content-area">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <div class="receipe-headline my-5">
+                            <span>{{carro.entrada}}</span>
+                            <h2>{{carro.placa_carro}}</h2>
+                            <div class="receipe-duration">
+                                <h6>Modelo: {{carro.modelo_carro}}</h6>
+                                <h6>Cor: {{carro.cor_do_carro}}</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                
+    {% include 'partials/footer.html' %}
+{% endblock %}
