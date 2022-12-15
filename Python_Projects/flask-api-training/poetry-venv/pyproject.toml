@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "poetry-venv"
+version = "0.1.0"
+description = ""
+authors = ["ewerton-beegol <ewerton.andrade@beegol.com>"]
+readme = "README.md"
+packages = [{include = "poetry_venv"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^2.2.2"
+python-dotenv = "^0.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
