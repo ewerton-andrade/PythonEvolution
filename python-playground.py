@@ -223,3 +223,12 @@ from datetime import datetime, date, timedelta
 # twenty_four_hours_later = my_datetime + timedelta(hours=24)
 # print(f"===>>> Twenty minutes before: {twenty_four_hours_later}")
 # print(f"{type(twenty_four_hours_later)}")
+
+
+branch_detailing_body ="""{"startDate":"${dataInicial}","endDate":"${dataFinal}","node":null,"state":[],"city":[],"daysMinWithProblem":"1","KPI":["D","U","PL","L","J"],"numberMax":"500","mac":"","cmts":null,"port":"","cto":null,"typeFilter":"any","nodeRootProblem":false,"qoe":[0,7],"qoeAccess":[0,7],"qoeAvailability":[0,7],"qoeWifi":[0,7],"enableSliderQoe":false,"enableSliderQoeAccess":false,"enableSliderQoeAvailability":false,"EnableSliderQoeWifi":false,"tab":2,"view":"mean"}"""
+jmeter_detailing_body ="""{"startDate":"${dataInicial}","endDate":"${dataFinal}","node":null,"state":[],"city":[],"daysMinWithProblem":"1","KPI":["D","U","PL","L","J"],"numberMax":"500","mac":"","cmts":null,"port":"","cto":null,"typeFilter":"any","nodeRootProblem":false,"qoe":[0,7],"qoeAccess":[0,7],"qoeAvailability":[0,7],"qoeWifi":[0,7],"enableSliderQoe":false,"enableSliderQoeAccess":false,"enableSliderQoeAvailability":false,"EnableSliderQoeWifi":false,"tab":2,"view":"mean"}"""
+
+print(50*"=")
+print("Is branch body equal to jmeter body request?")
+print(f"====>>>>{branch_detailing_body == jmeter_detailing_body}")
+print(50*"=")
